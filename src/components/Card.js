@@ -1,26 +1,24 @@
 import europa from '../images/image-europa.png';
+import data from '../data.json';
 
-export default function Card() {
+export default function Card(props) {
 	return (
-		<div>
-			<img src={europa} className='card-img' alt='planet' />
+		<div className='wrapper'>
+			<img
+				src={require(`../images/${props.item.images.png}`)}
+				className='card--img'
+				alt='planet'
+			/>
 
-			<h2>Europa</h2>
+			<div className='wrapper--description'>
+				<h2>{props.item.name}</h2>
 
-			<p>
-				The smallest of the four Galilean moons orbiting Jupiter, Europa is a
-				winter lover’s dream. With an icy surface, it’s perfect for a bit of ice
-				skating, curling, hockey, or simple relaxation in your snug wintery
-				cabin.
-			</p>
+				<p>{props.item.description}</p>
 
-			<p>Avg. distance</p>
+				<p>Avg. distance - {props.item.distance}</p>
 
-			<p>628 mil. km</p>
-
-			<p>Est. travel time</p>
-
-			<p>3 years</p>
+				<p>Est. travel time - {props.item.travel}</p>
+			</div>
 		</div>
 	);
 }

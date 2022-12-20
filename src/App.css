@@ -6,8 +6,13 @@
 
 body {
 	margin: 0;
-	font-family: 'Inter', sans-serif;
-	min-height: 100vh;
+	font-family: 'Inter', 'Barlow', 'Bellefair', sans-serif;
+	/* min-height: 100vh; */
+	background-image: url('../src/images/background-destination-mobile.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* background-repeat: no-repeat; */
 }
 
 h1,
@@ -39,4 +44,51 @@ nav {
 	font-weight: 400;
 	font-family: 'Inter';
 	letter-spacing: 1.4px;
+}
+
+.wrapper {
+	margin: 2em;
+}
+
+.card--img {
+	width: 50%;
+	margin-inline: auto;
+}
+
+.wrapper--description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.wrapper--description h2 {
+	font-family: 'Bellefair';
+	margin-top: 0.5em;
+	font-size: 56px;
+	font-weight: 400;
+	line-height: 64.18px;
+	letter-spacing: 1px;
+	color: white;
+}
+
+.wrapper--description p {
+	font-family: 'Barlow';
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.9px;
+	color: white;
+}
+
+@media (min-width: 565px) {
+	body {
+		background-image: url('../src/images/background-destination-tablet.jpg');
+	}
+}
+
+@media (min-width: 765px) {
+	body {
+		background-image: url('../src/images/background-destination-desktop.jpg');
+		background-repeat: no-repeat;
+	}
 }
