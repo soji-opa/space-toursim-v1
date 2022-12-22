@@ -21,15 +21,19 @@ h3 {
 	line-height: 1.1;
 }
 
-p {
-	line-height: 1.6;
-}
-
 img {
 	max-width: 100%;
 	display: block;
 }
 
+.destination h2 {
+	text-align: center;
+	color: white;
+	font-size: 40px;
+	font-family: 'Barlow';
+	letter-spacing: 0.9px;
+	margin: 0.5em 0;
+}
 nav {
 	display: flex;
 	align-items: center;
@@ -70,19 +74,61 @@ nav {
 	line-height: 64.18px;
 	letter-spacing: 1px;
 	color: white;
+	text-transform: uppercase;
 }
 
-.wrapper--description p {
+.wrapper-paragraph {
 	font-family: 'Barlow';
-	font-size: 12px;
+	font-style: normal;
 	font-weight: 400;
-	letter-spacing: 0.9px;
+	font-size: 15px;
+	line-height: 25px;
+	text-align: center;
+	color: #d0d6f9;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #383b4b;
+}
+
+.time-estimate {
+	margin-top: 2em;
+	text-align: center;
 	color: white;
+}
+
+.mini-estimate p:nth-child(1) {
+	font-family: 'Barlow Condensed';
+	font-size: 10px;
+	font-weight: 100;
+	line-height: 17px;
+	letter-spacing: 2.362499952316284px;
+	text-align: center;
+	padding-bottom: 12px;
+}
+.mini-estimate {
+	font-family: 'Bellefair';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 32px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin-bottom: 1.5em;
 }
 
 @media (min-width: 565px) {
 	body {
 		background-image: url('../src/images/background-destination-tablet.jpg');
+	}
+	.wrapper--description h2 {
+		font-size: 80px;
+	}
+	.time-estimate {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 3em;
 	}
 }
 
@@ -90,5 +136,29 @@ nav {
 	body {
 		background-image: url('../src/images/background-destination-desktop.jpg');
 		background-repeat: no-repeat;
+	}
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5em;
+	}
+
+	.card--img {
+		width: 75%;
+	}
+
+	.wrapper--img {
+		width: 50%;
+	}
+
+	.wrapper--description {
+		width: 40%;
+	}
+
+	.time-estimate {
+		margin-right: auto;
+		gap: 1em;
 	}
 }

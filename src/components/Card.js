@@ -1,23 +1,30 @@
-import europa from '../images/image-europa.png';
-import data from '../data.json';
-
 export default function Card(props) {
 	return (
 		<div className='wrapper'>
-			<img
-				src={require(`../images/${props.item.images.png}`)}
-				className='card--img'
-				alt='planet'
-			/>
+			<div className='wrapper--img'>
+				<img
+					src={require(`../images/${props.item.images.png}`)}
+					className='card--img'
+					alt='planet'
+				/>
+			</div>
 
 			<div className='wrapper--description'>
 				<h2>{props.item.name}</h2>
 
-				<p>{props.item.description}</p>
+				<p className='wrapper-paragraph'>{props.item.description}</p>
 
-				<p>Avg. distance - {props.item.distance}</p>
+				<div className='time-estimate'>
+					<div className='mini-estimate'>
+						<p>Avg. distance </p>
+						<p className='paragraph-dec'>{props.item.distance}</p>
+					</div>
 
-				<p>Est. travel time - {props.item.travel}</p>
+					<div className='mini-estimate'>
+						<p>Est. travel time </p>
+						<p className='paragraph-dec'>{props.item.travel}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

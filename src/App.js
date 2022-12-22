@@ -30,7 +30,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar />
-			<section>
+			<section className='destination'>
 				<h2>Destinations</h2>
 				{cardEl}
 			</section>
