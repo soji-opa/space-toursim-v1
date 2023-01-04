@@ -11,7 +11,6 @@ export default function Card(props) {
 
 			<div className='wrapper--description'>
 				<h2>{props.item.name}</h2>
-
 				<p className='wrapper-paragraph'>{props.item.description}</p>
 
 				<div className='time-estimate'>

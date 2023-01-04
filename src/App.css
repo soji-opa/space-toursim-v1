@@ -7,12 +7,10 @@
 body {
 	margin: 0;
 	font-family: 'Inter', 'Barlow', 'Bellefair', sans-serif;
-	/* min-height: 100vh; */
 	background-image: url('../src/images/background-destination-mobile.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	/* background-repeat: no-repeat; */
 }
 
 h1,
@@ -26,13 +24,14 @@ img {
 	display: block;
 }
 
-.destination h2 {
+.section--header {
 	text-align: center;
 	color: white;
 	font-size: 40px;
 	font-family: 'Barlow';
 	letter-spacing: 0.9px;
 	margin: 0.5em 0;
+	text-transform: uppercase;
 }
 nav {
 	display: flex;
@@ -116,6 +115,55 @@ nav {
 	margin-bottom: 1.5em;
 }
 
+.crew--container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.crew-desc--wrapper {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.crew-img {
+	width: 85%;
+	margin-inline: auto;
+}
+.crew-tag {
+	margin-top: 20px;
+	font-family: 'Bellefair';
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 18.34px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #c2c0c0ab;
+}
+
+.crew-name {
+	font-family: 'Bellefair';
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.crew-description {
+	font-family: 'Barlow';
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 25px;
+	letter-spacing: 0px;
+	text-align: center;
+	color: #d0d6f9;
+}
+
 @media (min-width: 565px) {
 	body {
 		background-image: url('../src/images/background-destination-tablet.jpg');
@@ -129,6 +177,21 @@ nav {
 		align-items: center;
 		justify-content: space-between;
 		gap: 3em;
+	}
+
+	.crew--container {
+		flex-direction: column-reverse;
+	}
+
+	.crew-img {
+		width: 100%;
+		margin-top: 15px;
+	}
+	.crew-tag {
+		font-size: 24px;
+	}
+	.crew-name {
+		font-size: 40px;
 	}
 }
 
@@ -146,7 +209,7 @@ nav {
 	}
 
 	.card--img {
-		width: 75%;
+		width: 60%;
 	}
 
 	.wrapper--img {
@@ -160,5 +223,19 @@ nav {
 	.time-estimate {
 		margin-right: auto;
 		gap: 1em;
+	}
+
+	.crew--container {
+		flex-direction: row-reverse;
+	}
+
+	.crew-desc--wrapper {
+		width: 60%;
+		align-items: flex-start;
+		gap: 1.5em;
+	}
+
+	.crew-description {
+		text-align: left;
 	}
 }
